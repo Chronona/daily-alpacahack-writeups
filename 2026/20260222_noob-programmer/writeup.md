@@ -75,7 +75,7 @@ print(s.recv(4096).decode())
 ## 実行方法
 
 ```bash
-python3 exploit.py
+python3 exploit_remote.py
 ```
-
+HOST_IP, HOST_PORTはリモートサーバーのものに書き換える
 
