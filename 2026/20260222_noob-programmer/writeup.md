@@ -1,5 +1,7 @@
 # noob-programmer 解法
 
+https://alpacahack.com/daily/challenges/noob-programmer
+
 ## 脆弱性
 
 `ask_room_number()`関数で`scanf()`の呼び出しにミスがある:
