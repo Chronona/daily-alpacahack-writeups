@@ -83,5 +83,4 @@ print(s.recv(4096).decode())
 python3 exploit_remote.py
 ```
 
-HOST_IP, HOST_PORTはリモートサーバーのものに書き換える
 
