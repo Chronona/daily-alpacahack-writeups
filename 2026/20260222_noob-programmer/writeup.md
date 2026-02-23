@@ -20,6 +20,7 @@ void ask_room_number() {
 
 ## スタックレイアウト
 
+`objdump -d chal`で確認
 ```
 show_welcome():
   char name[0x20]  at rbp-0x20
