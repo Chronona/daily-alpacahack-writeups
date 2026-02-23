@@ -13,7 +13,8 @@ void ask_room_number() {
 }
 ```
 
-`scanf("%ld", age)`は`age`のアドレスではなく、`age`の値（未初期化）を書き込み先として渡している。これにより、`age`の初期値を制御できれば任意のアドレスに書き込みが可能になる。
+`scanf("%ld", age)`は`age`のアドレスではなく、`age`の値（未初期化）を書き込み先として渡している。  
+したがって、`age`の初期値を制御できれば任意のアドレスに書き込みが可能になる。
 
 ## スタックレイアウト
 
@@ -25,7 +26,8 @@ ask_room_number():
   long age         at rbp-0x8
 ```
 
-両関数は`main()`の同じスタックフレームを共有している。`show_welcome()`が終了しても`name[0x18:0x20]`の内容はスタックに残り、`ask_room_number()`の`age`の初期値となる。
+両関数は`main()`の同じスタックフレームを共有している。  
+`show_welcome()`が終了しても`name[0x18:0x20]`の内容はスタックに残り、`ask_room_number()`の`age`の初期値となる。
 
 ## 攻撃手法
 
@@ -77,5 +79,6 @@ print(s.recv(4096).decode())
 ```bash
 python3 exploit_remote.py
 ```
+
 HOST_IP, HOST_PORTはリモートサーバーのものに書き換える
 
